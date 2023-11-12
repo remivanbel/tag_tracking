@@ -121,15 +121,15 @@ if f is not None:
             cv2.polylines(gray,[np.array(position_list)], isClosed=False, color=(255, 0, 0), thickness=2)
         stframe.image(gray)
 
-p = figure(
-    title='simple line example',
-    x_axis_label='Time [s]',
-    y_axis_label='Speed [mm/s]')
+    p = figure(
+        title='simple line example',
+        x_axis_label='Time [s]',
+        y_axis_label='Speed [mm/s]')
 
-# add a circle renderer with a size, color, and alpha
-for time_list, speed_list in zip(time_lol, speed_lol):
-    p.line(time_list, speed_list)
+    # add a circle renderer with a size, color, and alpha
+    for time_list, speed_list in zip(time_lol, speed_lol):
+        p.line(time_list, speed_list)
 
-st.bokeh_chart(p)
+    st.bokeh_chart(p)
 
 # TODO: test in production, how many images processed per time
