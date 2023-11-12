@@ -57,7 +57,7 @@ def detect_aruco_markers(frame):
 
     # Detect ArUco markers
     corners, ids, rejected_img_points = aruco.detectMarkers(gray, dictionary, parameters=parameters)
-    
+    print(rejected_img_points)
     tag_list = list()
     if ids is not None:
         for i in range(len(ids)):

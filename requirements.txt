@@ -1,1 +1,2 @@
+opencv-contrib-python
 bokeh == 2.4.3
